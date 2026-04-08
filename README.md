@@ -45,18 +45,18 @@ CrunchRec \
    python crunchrec.py  ## It will automatically create config.json and ask you to save your Crunchyroll credentials.
 
 # Usage
-## Main Commands
+### Main Commands
 
-### Run the full pipeline (scrape → analyze → update DB → generate prompt)
+Run the full pipeline (scrape → analyze → update DB → generate prompt)
 python crunchrec.py run
 
-## Show help
+### Show help
 python crunchrec.py -h
 
-## Manually add a series to your watched database
+### Manually add a series to your watched database
 python crunchrec.py add_watched
 
-## Only generate and print the recommendation prompt
+### Only generate and print the recommendation prompt
 python crunchrec.py prompt
 
 ## Example Workflow
@@ -79,11 +79,17 @@ config.json – Stores your email, password, and settings
 crunchyroll_watched_db.json – Your long-term taste profile (top 50 series)
 crunchyroll_recommendation_prompt.txt – Ready-to-use prompt for any AI
 
-
-
 ## Disclaimer
 This project is for personal educational use only.
 Make sure to respect Crunchyroll's Terms of Service. Use at your own risk.
+Be aware that this is NOT a supported Crunchyroll's API access and uses and Bot and a manual user press to connect.
+THe activity may not be approved by Crunchyroll's and hsould be use accurdingly.
+If in doubt, connect the creator for details.
+The use and any application use is not to make the creator responsible for any missuse of the code and was created personally for him.
+Any one using this code takes ownership of his/her actions and will no hold the creator accuntable.
+
+NOTE: Each tiem running the script a message appears that the user takes full responsibility by using the "Log In" button in the Crunchyroll login website.
+Any claim the the script made the action without approval are non relevant and the creator will not be held accountable for unapproved changes in the code.
 
 ## Contributing
 Feel free to open issues or pull requests if you want to improve scoring, add new features, or enhance the AI prompt.
