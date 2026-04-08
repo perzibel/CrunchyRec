@@ -1,0 +1,62 @@
+[MAIN]
+# Load configuration from this file
+load-plugins=
+
+# Score threshold - only fail if score is below this (you can raise it later)
+fail-under=7.0
+
+# Maximum line length (increased from default 100)
+max-line-length=120
+
+[FORMAT]
+# Allow longer lines (common in prompts and f-strings)
+max-line-length=120
+
+[MESSAGES CONTROL]
+# Disable very noisy / annoying checks for small/personal projects
+disable=
+    # Style / convention
+    missing-module-docstring,
+    missing-function-docstring,
+    missing-class-docstring,
+    invalid-name,               # e.g. Crunch_DB.py, Create_Recommendation_Prompt
+    line-too-long,
+    too-many-locals,
+    too-many-branches,
+    too-many-statements,
+    too-many-arguments,
+
+    # Minor style
+    trailing-whitespace,
+    missing-final-newline,
+    unused-variable,            # sometimes useful to keep
+    consider-using-sys-exit,
+
+    # Docstring related (if you don't want any)
+    # missing-docstring,        # comment this if you want to keep function docstrings
+
+    # Import related (playwright sometimes causes false positives in CI)
+    import-error,
+
+[MESSAGE CONTROL]
+# You can also disable specific messages by ID if needed
+# C0301 = line-too-long
+# C0114 = missing-module-docstring
+# C0103 = invalid-name
+# etc.
+
+[REPORTS]
+# Don't generate full report (faster + cleaner output)
+output-format=text
+
+[SIMILARITIES]
+# Reduce duplicate code sensitivity (you had some duplicate blocks)
+min-similarity-lines=15
+
+[BASIC]
+# Allow short variable names (common in scripts)
+good-names=i,j,k,ex,dt,r,f
+
+[EXCEPTIONS]
+# Still warn on very broad exceptions, but not as harshly
+overgeneral-exceptions=Exception,BaseException
