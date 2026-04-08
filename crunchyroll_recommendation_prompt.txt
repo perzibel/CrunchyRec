@@ -1,0 +1,101 @@
+You are an expert anime recommendation assistant with deep knowledge of Crunchyroll content.
+
+### My Crunchyroll Watching History & Taste Profile:
+
+I have watched 8 different series on Crunchyroll.
+
+**Total watch time:** Approximately 36.6 hours
+
+**My Top Highly Rated Series (I really enjoyed these):**
+1. **The Water Magician**
+   - Score: 100/100
+   - Episodes watched: 10
+   - Average completion: 100.0%
+   - Maturity: Unknown
+   - Genres/Categories: Drama, Fantasy
+   - Content: None
+2. **Frieren: Beyond Journey's End**
+   - Score: 100/100
+   - Episodes watched: 10
+   - Average completion: 100.0%
+   - Maturity: Unknown
+   - Genres/Categories: Fantasy, Adventure, Drama
+   - Content: None
+3. **Dr. STONE**
+   - Score: 100/100
+   - Episodes watched: 56
+   - Average completion: 100.0%
+   - Maturity: Unknown
+   - Genres/Categories: Adventure, Comedy, Drama, Sci-Fi
+   - Content: None
+4. **One Piece**
+   - Score: 95.0/100
+   - Episodes watched: 18
+   - Average completion: 100.0%
+   - Maturity: Unknown
+   - Genres/Categories: Adventure, Action, Comedy, Fantasy
+   - Content: None
+5. **I've Been Killing Slimes For 300 Years And Maxed Out My Level**
+   - Score: 77.5/100
+   - Episodes watched: 1
+   - Average completion: 100.0%
+   - Maturity: Unknown
+   - Genres/Categories: N/A
+   - Content: None
+6. **Log Horizon**
+   - Score: 65.0/100
+   - Episodes watched: 2
+   - Average completion: 100.0%
+   - Maturity: Unknown
+   - Genres/Categories: N/A
+   - Content: None
+7. **Dragon Ball DAIMA**
+   - Score: 65.0/100
+   - Episodes watched: 2
+   - Average completion: 100.0%
+   - Maturity: Unknown
+   - Genres/Categories: N/A
+   - Content: None
+8. **Re:ZERO -Starting Life in Another World-**
+   - Score: 62.5/100
+   - Episodes watched: 1
+   - Average completion: 100.0%
+   - Maturity: Unknown
+   - Genres/Categories: Fantasy, Thriller
+   - Content: None
+
+**My Genre Preferences (ranked by how much I liked them):**
+- Drama: 100.0/100
+- Sci-Fi: 100.0/100
+- Adventure: 98.3/100
+- Comedy: 97.5/100
+- Action: 95.0/100
+- Fantasy: 89.4/100
+- Thriller: 62.5/100
+
+**My Content Preferences:**
+- I tend to drop series very early if I don't like them (low tolerance for slow starts).
+- I strongly prefer series where I finish most or all available episodes.
+- Maturity level I usually watch: Unknown
+
+---
+
+### Task:
+Based on the above information about my taste, recommend **10 new anime series** that I haven't watched yet.
+
+**Requirements for recommendations:**
+- Focus on series that match my high-scoring patterns (story, pacing, genres, tone).
+- Include a mix of popular and hidden gems.
+- For each recommendation, give:
+  1. Series name
+  2. Why it matches my taste (be specific, reference my top series or genres)
+  3. Brief plot summary (2-3 sentences)
+  4. Expected maturity rating
+  5. Number of seasons/episodes available on Crunchyroll (if known)
+
+Prioritize series with similar genres and vibe to my highest scored shows.
+Avoid anything too similar to the ones I dropped early.
+
+Today's date: April 07, 2026
+
+Please format the response clearly and engagingly.

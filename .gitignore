@@ -1,0 +1,61 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# IDE / Editor
+# =========================
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# JSON / Local Data (IMPORTANT)
+# =========================
+# These look like generated / personal data — do NOT commit
+watch_history.json
+crunchyroll_watched_db.json
+crunchyroll_recommendations.json
+crunchyroll_state.json
+
+# If config has secrets, ignore it too:
+config.json
+
+# =========================
+# Cache / temp
+# =========================
+.pytest_cache/
+.cache/
+
+# =========================
+# Build / dist
+# =========================
+build/
+dist/
+*.egg-info/
+
+# =========================
+# Git
+# =========================
+.git/
