@@ -7,6 +7,7 @@
 import json
 import os
 from collections import defaultdict
+from datetime import datetime
 
 DB_FILE = "crunchyroll_watched_db.json"
 MAX_SERIES_IN_DB = 50
@@ -55,7 +56,8 @@ def update_db_from_report():
             "genres": entry.get("genres", []),
             "score": entry.get("score", 0),
             "maturity_rating": entry.get("maturity_rating", "Unknown"),
-            "last_updated": entry.get("last_watched")
+            "last_updated": entry.get("last_watched"),
+            "Added_to_list": datetime.now().isoformat()
         }
 
         db.append(new_entry)

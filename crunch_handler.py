@@ -8,6 +8,8 @@ import json
 import os
 import sys
 from datetime import datetime
+from pprint import pprint
+
 import Crunch_scrapper, Crunch_DB, Create_Recommendation_Prompt, Prase_history
 
 CONFIG_FILE = "config.json"
@@ -82,7 +84,7 @@ def run_full_pipeline(config):
         # Or call your playwright script directly if it's in another file
 
         print("Step 1: Running scraper...")
-        run_scraper(config["email"],config["password"])
+        run_scraper(config["email"], config["password"])
         # For now we'll assume watch_history.json is generated
 
         # 2. Run analysis
@@ -137,7 +139,8 @@ def add_watched_manually():
         "genres": genres,
         "score": score,
         "maturity_rating": maturity,
-        "last_updated": datetime.now().isoformat()
+        "last_updated": datetime.now().isoformat(),
+        "Added_to_list": datetime.now().isoformat()
     }
 
     db.append(new_entry)
@@ -164,6 +167,70 @@ def print_prompt_only():
         print(f"❌ Could not generate prompt: {e}")
 
 
+def print_db():
+    from rich.console import Console
+    from rich.table import Table
+    from rich.panel import Panel
+    from rich import box
+    from rich.text import Text
+    import json
+
+    console = Console()
+    db = Crunch_DB.load_db()
+    # Header Panel with anime vibe
+    header = Text.from_markup(f"[bold magenta]🌟 Here is your awesome series database 🌟[/]")
+    console.print(Panel(header, style="bold cyan", box=box.DOUBLE))
+
+    # Beautiful Table
+    table = Table(
+        title="Anime Series",
+        show_header=True,
+        header_style="bold magenta",
+        box=box.ROUNDED,
+        border_style="blue",
+        title_style="bold yellow"
+    )
+
+    # Add columns (customize based on your JSON keys)
+    table.add_column("Rank", style="cyan", justify="right", width=4)
+    table.add_column("Series Name", style="bold green", no_wrap=True)
+    table.add_column("Maturity", justify="center", style="dim")
+    table.add_column("Score", justify="right")
+    table.add_column("Last Updated", style="dim yellow")
+    table.add_column("Genres", style="italic blue")
+
+    # Populate rows with cool styling
+    for i, anime in enumerate(db, 1):
+        # Score color
+        score = anime['score']
+        score_color = "bright_green" if score >= 90 else "green" if score >= 70 else "yellow" if score >= 50 else "red"
+
+        # Maturity color (you can adjust)
+        maturity = anime['maturity_rating']
+        status_style = "bold green" if maturity in ["PG-13", "13+",
+                                                    "Teen"] else "bold yellow" if maturity == "Unknown" else "red"
+
+        # Clean last updated date
+        try:
+            dt = datetime.fromisoformat(anime['last_updated'].replace('Z', '+00:00'))
+            updated_str = dt.strftime("%Y-%m-%d")
+        except:
+            updated_str = str(anime.get('last_updated', 'N/A'))
+
+        genres_str = ", ".join(anime.get('genres', []))
+
+        table.add_row(
+            f"{i:02d}",
+            anime.get('series_name', 'Unknown'),
+            Text(str(maturity), style=status_style),
+            Text(str(score), style=score_color),
+            updated_str,
+            genres_str
+        )
+
+    console.print(table)
+
+
 def main():
     config = setup_config_if_needed()
 
@@ -183,6 +250,12 @@ def main():
     # Print prompt only
     parser_prompt = subparsers.add_parser("prompt", help="Print current recommendation prompt to console")
 
+    # Print the current DB
+    parser_prompt = subparsers.add_parser("view_db", help="View the current Database")
+
+    # Update DB from report
+    parser_prompt = subparsers.add_parser("update_db", help="Update the current DB from the last resport")
+
     # Help is automatic with -h / --help
 
     args = parser.parse_args()
@@ -197,6 +270,11 @@ def main():
         add_watched_manually()
     elif args.command == "prompt":
         print_prompt_only()
+    elif args.command == "view_db":
+        print_db()
+    elif args.command == "update_db":
+        from Crunch_DB import update_db_from_report
+        update_db_from_report()
     else:
         parser.print_help()
 
