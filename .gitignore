@@ -35,6 +35,10 @@ Thumbs.db
 # =========================
 # These look like generated / personal data — do NOT commit
 crunchyroll_state.json
+crunchyroll_recommendation_prompt.txt
+crunchyroll_recommendations.json
+crunchyroll_watched_db.json
+watch_history.json
 
 # If config has secrets, ignore it too:
 config.json

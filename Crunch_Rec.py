@@ -165,8 +165,8 @@ def main():
             "total_watch_minutes": total_minutes,
             "last_watched": last_watched,
             "score": score,
-            "maturity_rating": first_ep.get("extended_maturity_rating", {}).get("rating", "Unknown"),
-            "content_descriptors": first_ep.get("content_descriptors", [])
+            "maturity_rating": first_ep["panel"]["episode_metadata"]['maturity_ratings'],
+            "content_descriptors": first_ep["panel"]["episode_metadata"]["content_descriptors"]
         })
 
     # Sort by score descending
@@ -204,7 +204,7 @@ def main():
         genres_str = ", ".join(r.get("genres", []))[:80]
         print(f"{i:2d}. {r['series_name']}")
         print(f"    Score: {r['score']}/100  | Episodes: {r['episodes_watched']} "
-              f"| Completion: {r['avg_completion_percent']}%  | Time: {r['total_watch_minutes']} min")
+              f"| Completion: {r['avg_completion_percent']}%  | Time: {r['total_watch_minutes']} min | {r['maturity_rating']} | {r['content_descriptors']}")
         if genres_str:
             print(f"    Genres : {genres_str}")
         if r.get('last_watched'):
