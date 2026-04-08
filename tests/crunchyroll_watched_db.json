@@ -1,0 +1,78 @@
+[
+  {
+    "series_name": "The Water Magician",
+    "genres": [
+      "Drama",
+      "Fantasy"
+    ],
+    "score": 100,
+    "maturity_rating": "TV-14",
+    "last_updated": "2026-04-05T20:47:03Z"
+  },
+  {
+    "series_name": "Frieren: Beyond Journey's End",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Drama"
+    ],
+    "score": 100,
+    "maturity_rating": "TV-14",
+    "last_updated": "2026-04-02T21:10:51Z"
+  },
+  {
+    "series_name": "Dr. STONE",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "score": 100,
+    "maturity_rating": "TV-14",
+    "last_updated": "2026-03-19T22:30:34Z"
+  },
+  {
+    "series_name": "One Piece",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Comedy",
+      "Fantasy"
+    ],
+    "score": 95.0,
+    "maturity_rating": "TV-14",
+    "last_updated": "2026-04-05T21:39:53Z"
+  },
+  {
+    "series_name": "I've Been Killing Slimes For 300 Years And Maxed Out My Level",
+    "genres": [],
+    "score": 77.5,
+    "maturity_rating": "TV-14",
+    "last_updated": "2026-04-06T22:07:41Z"
+  },
+  {
+    "series_name": "Log Horizon",
+    "genres": [],
+    "score": 65.0,
+    "maturity_rating": "TV-14",
+    "last_updated": "2026-04-05T21:34:09Z"
+  },
+  {
+    "series_name": "Dragon Ball DAIMA",
+    "genres": [],
+    "score": 65.0,
+    "maturity_rating": "TV-14",
+    "last_updated": "2026-02-23T23:28:04Z"
+  },
+  {
+    "series_name": "Re:ZERO -Starting Life in Another World-",
+    "genres": [
+      "Fantasy",
+      "Thriller"
+    ],
+    "score": 62.5,
+    "maturity_rating": "TV-14",
+    "last_updated": "2026-04-06T22:04:27Z"
+  }
+]
