@@ -155,7 +155,7 @@ def print_prompt_only():
     """Only generate and print the prompt to console"""
     try:
         from Create_Recommendation_Prompt import create_prompt
-        from Crunch_scrapper import load_report  # or directly load recommendations.json
+        from Create_Recommendation_Prompt import load_report  # or directly load recommendations.json
         report = load_report() if hasattr(load_report, '__call__') else json.load(
             open("crunchyroll_recommendations.json"))
         prompt = create_prompt(report)
