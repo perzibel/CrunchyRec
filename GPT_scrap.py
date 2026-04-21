@@ -49,7 +49,7 @@ def main(email, password):
         Object.defineProperty(navigator, 'webdriver', {
             get: () => undefined
         });
-    
+
         window.chrome = {
             runtime: {}
         };
@@ -59,8 +59,9 @@ def main(email, password):
 
         # === Login ===
         print("Going to login page...")
-        page.goto("https://sso.crunchyroll.com/login", wait_until="networkidle")
-
+        page.goto("https://feedly.com/homepage", wait_until="networkidle")
+        page.get_by_label("Log in").click()
+        """
         page.get_by_label("Email Address").fill(email)
         page.get_by_role("textbox", name="Password").fill(password)
 
@@ -105,7 +106,7 @@ def main(email, password):
         print("\nBrowser will stay open.")
         browser.close()  # Optional: uncomment if you want to close automatically
 
-
+"""
 if __name__ == "__main__":
     EMAIL = ""
     PASSWORD = ""

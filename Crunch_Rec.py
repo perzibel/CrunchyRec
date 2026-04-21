@@ -76,7 +76,7 @@ def get_genres(entry):
 
 def calculate_episode_completion(ep):
     """Returns completion % (0-100) for a single episode"""
-    if ep.get("fully_watched"):
+    if ep["fully_watched"]:
         return 100.0
 
     playhead_sec = ep.get("playhead", 0)

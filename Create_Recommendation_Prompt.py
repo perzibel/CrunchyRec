@@ -75,7 +75,7 @@ I have data on {len(combined_data)} different series on Crunchyroll.
 **My Top Highly Rated Series (I really enjoyed these):**
 """
 
-    for i, r in enumerate(top_series[:12], 1):
+    for i, r in enumerate(top_series, 1):
         genres = ", ".join(r.get("genres", [])) if r.get("genres") else "N/A"
         descriptors = ", ".join(r.get("content_descriptors", [])) if r.get("content_descriptors") else "None"
 
